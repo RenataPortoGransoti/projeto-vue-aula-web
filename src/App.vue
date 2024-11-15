@@ -1,19 +1,23 @@
+<!-- App.vue -->
 <script setup>
+import { ref, provide } from 'vue';
+
+const itens = ref([]); // Lista global de itens
+
+function adicionarItem(item) {
+  itens.value.push(item);
+}
+
+function removerItem(id) {
+  itens.value = itens.value.filter((item) => item.id !== id);
+}
+
+// Prover os métodos e a lista de itens para outros componentes
+provide('itens', itens);
+provide('adicionarItem', adicionarItem);
+provide('removerItem', removerItem);
 </script>
 
 <template>
-  <main>
-    <router-view />
-  </main>
+  <router-view />
 </template>
-
-<style scoped>
-main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f3f4f6;
-  min-height: 100vh;
-}
-</style>

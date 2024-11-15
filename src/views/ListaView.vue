@@ -1,42 +1,27 @@
 <template>
   <div class="lista-itens">
     <h2>Santos Adicionados</h2>
-
+    <router-link to="/" class="cadastrar-santo">
+      Cadastrar santo
+    </router-link>
     <div v-if="itens.length === 0" class="mensagem-vazia">
       <p>Nenhum santo foi adicionado ainda.</p>
     </div>
 
     <ul v-else>
-      <ListaItem
-        v-for="item in itens"
-        :key="item.id"
-        :item="item"
-        :removerItem="removerItem"
-      />
+      <ListaItem v-for="item in itens" :key="item.id" :item="item" :removerItem="removerItem" />
     </ul>
   </div>
 </template>
 
-<script>
+<script setup>
 import ListaItem from '@/components/ListaItem.vue';
+import { inject } from 'vue';
 
-export default {
-  components: {
-    ListaItem
-  },
-  props: {
-    itens: {
-      type: Array,
-      required: true
-    }
-  },
-  methods: {
-    removerItem(id) {
-      this.$emit('remover-item', id);
-    }
-  }
-};
+const itens = inject('itens'); // Lista global de itens
+const removerItem = inject('removerItem'); // Função global para remover itens
 </script>
+
 
 <style scoped>
 .lista-itens {

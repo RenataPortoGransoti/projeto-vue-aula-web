@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="adicionarItem" class="formulario">
     <div class="form-group">
-      <label for="nome">Nome do Item:</label>
+      <label for="nome">Nome do Santo:</label>
       <input type="text" v-model="nome" id="nome" required class="input-campo" />
     </div>
 
@@ -9,6 +9,7 @@
       <label for="descricao">Descrição:</label>
       <textarea v-model="descricao" id="descricao" required class="input-campo textarea"></textarea>
     </div>
+    <div></div>
 
     <button type="submit" class="botao">Adicionar</button>
   </form>
