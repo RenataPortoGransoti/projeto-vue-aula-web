@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import CadastroView from '@/views/CadastroView.vue';
 import ListaView from '@/views/ListaView.vue';
+import OracoesView from '@/views/OracoesView.vue';
 
 const routes = [
   {
@@ -10,7 +11,8 @@ const routes = [
   {
     path: '/lista-santos',
     component: ListaView
-  }
+  },
+  { path: '/oracoes', component: OracoesView },
 ];
 
 const router = createRouter({
