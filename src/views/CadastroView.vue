@@ -2,6 +2,9 @@
   <div class="cadastro-container">
     <h2>Catolicismo - Cadastre um santo</h2>
     <CadastroItem @item-adicionado="adicionarItemNaLista" />
+    <router-link to="/lista-santos">
+      <a class="ver-lista-btn">Ver lista</a>
+    </router-link>
   </div>
 </template>
 
@@ -40,4 +43,8 @@ h2 {
 .form-group{
   text-align: left;
 }
+
+.ver-lista-btn{
+  color: #2a8b83;
+  }
 </style>
