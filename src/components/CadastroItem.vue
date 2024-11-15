@@ -10,7 +10,7 @@
       <textarea v-model="descricao" id="descricao" required class="input-campo textarea"></textarea>
     </div>
 
-    <button type="submit" class="botao">Adicionar Item</button>
+    <button type="submit" class="botao">Adicionar</button>
   </form>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="cadastro-container">
-    <h2>Cadastro de Itens</h2>
+    <h2>Catolicismo - Cadastre um santo</h2>
     <CadastroItem @item-adicionado="adicionarItemNaLista" />
   </div>
 </template>
@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     adicionarItemNaLista(item) {
-      console.log('Item cadastrado:', item);
+      console.log('Santos cadastrados:', item);
     }
   }
 };
@@ -22,15 +22,11 @@ export default {
 
 <style scoped>
 .cadastro-container {
-  width: 100%;
-  max-width: 800px;
   padding: 2rem;
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
   flex-direction: column;
-  align-items: center;
   font-family: Arial, sans-serif;
 }
 
@@ -39,5 +35,9 @@ h2 {
   color: #333;
   margin-bottom: 1.5rem;
   text-align: center;
+}
+
+.form-group{
+  text-align: left;
 }
 </style>
