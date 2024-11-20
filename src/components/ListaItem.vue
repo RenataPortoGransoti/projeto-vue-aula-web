@@ -39,7 +39,7 @@ export default {
 .item-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; 
 }
 
 h3 {
@@ -57,9 +57,10 @@ p {
   background-color: #e53e3e;
   color: #fff;
   border: none;
-  border-radius: 4px;
-  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
+  font-size: 1rem;
   transition: background-color 0.3s;
 }
 
