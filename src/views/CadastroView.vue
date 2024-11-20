@@ -5,7 +5,9 @@
     <router-link to="/lista-santos" class="ver-lista-btn">
       Ver lista
     </router-link>
-
+    <router-link to="/oracoes" class="ver-oracoes-btn">
+      Ver Orações
+    </router-link>
   </div>
 </template>
 
@@ -37,7 +39,8 @@ function adicionarItemNaLista(item) {
   min-height: 100vh;
 }
 
-.ver-lista-btn {
+.ver-lista-btn,
+.ver-oracoes-btn {
   color: #2a8b83;
   font-size: 18px;
   font-weight: bold;
@@ -51,19 +54,9 @@ function adicionarItemNaLista(item) {
   transition: background-color 0.3s, color 0.3s;
 }
 
-.ver-lista-btn:hover {
+.ver-lista-btn:hover,
+.ver-oracoes-btn:hover {
   background-color: #2a8b83;
   color: #ffffff;
-}
-
-h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.form-group {
-  text-align: left;
 }
 </style>
